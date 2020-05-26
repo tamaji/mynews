@@ -24,13 +24,13 @@
                         <label class="col-md-2" for="gender">性別</label>
                         <div class="col-md-10">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="male" value="male" {{ $profile_form->gender == "male" ? 'checked="checked"' : '' }}>
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="1" {{ $profile_form->gender == "1" ? 'checked="checked"' : '' }}>
                                 <label class="form-check-label" for="male">
                                     男性
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="female" value="female" {{ $profile_form->gender == "female" ? 'checked="checked"' : '' }}>
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="2" {{ $profile_form->gender == "2" ? 'checked="checked"' : '' }}>
                                 <label class="form-check-label" for="female">
                                     女性
                                 </label>

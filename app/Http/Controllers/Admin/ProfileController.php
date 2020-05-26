@@ -33,6 +33,15 @@ class ProfileController extends Controller
         return redirect('admin/profile/create');
     }
     
+    public function index(Request $request)
+    {
+        \Debugbar::info($request);
+        // ユーザーのプロフィールを取得する
+        $profile = Profile::find(1);
+
+        return view('admin.profile.index', ['profile' => $profile]);
+    }
+
     public function edit(Request $request)
     {
         // Profile Modelからデータを取得する
@@ -58,6 +67,6 @@ class ProfileController extends Controller
         // 該当するデータを上書きして保存する
         $profile->fill($profile_form)->save();
         
-        return redirect('admin/profile/edit');
+        return redirect('admin/profile');
     }
 }
