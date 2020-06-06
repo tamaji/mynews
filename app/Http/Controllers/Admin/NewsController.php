@@ -25,7 +25,7 @@ class NewsController extends Controller
         
         $news = new News;
         $form = $request->all();
-        
+
         // フォームから画像が送信されてきたら、保存して、$news->image_path に画像のパスを保存する
         if (isset($form['image'])) {
             $path = $request->file('image')->store('public/image');
@@ -68,7 +68,7 @@ class NewsController extends Controller
         if (empty($news)) {
             abort(404);
         }
-        
+
         return view('admin.news.edit', ['news_form' => $news]);
     }
     
