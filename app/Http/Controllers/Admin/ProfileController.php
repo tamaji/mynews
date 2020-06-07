@@ -37,7 +37,6 @@ class ProfileController extends Controller
     
     public function index(Request $request)
     {
-        \Debugbar::info($request);
         // ユーザーのプロフィールを取得する
         $profile = Profile::find(1);
 
