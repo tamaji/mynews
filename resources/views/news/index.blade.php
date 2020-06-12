@@ -3,6 +3,7 @@
 
 @section('content')
     <div class="container">
+        <p>ニュースの一覧を表示します</p>
         <hr color="#c0c0c0">
         @if (!is_null($headline))
             <div class="row">
